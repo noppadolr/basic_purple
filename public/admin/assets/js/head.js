@@ -15,7 +15,7 @@
         theme: "light",
 
         layout: {
-            mode: "default",
+            mode: "detached",
             width: "default",
         },
 
@@ -32,7 +32,7 @@
         sidenav: {
             size: "default",
             twocolumn: "light",
-            user: false,
+            user: true,
         },
     };
 
@@ -91,7 +91,7 @@
         if (config.sidenav.user && config.sidenav.user.toString() === "true") {
             html.setAttribute("data-sidenav-user", true);
         } else {
-            html.removeAttribute("data-sidenav-user");
+            html.setAttribute("data-sidenav-user",true);
         }
     }
 
